@@ -1,8 +1,15 @@
 ---
 # the default layout is 'page'
 icon: fas fa-info-circle
-order: 4
+order: 3
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+**RUNESCRIBE** <br>
+We provide games and tutorials for anyone to try out and learn from.
+
+**Contact** <br>
+If you have any queries, feel free to drop an email at _ilyas@runescribe.com_
+
+**Credits**
+> Powered by Jekyll theme Chirpy
+
