@@ -5,10 +5,12 @@ order: 2
 
 ### retroPy Basics
 1. [Getting Started][3]
+2. [Update Firmware][7]
 
 ### Tutorials
-1. [Movement Tutorial (Part I)][4]
-2. [Movement Tutorial (Part II)][5]
+1. [Flip Tutorial][6]
+2. [Movement Tutorial (Part I)][4]
+3. [Movement Tutorial (Part II)][5]
 
 ### APIs and Assets
 1. [APIs][1]
@@ -20,3 +22,5 @@ order: 2
 [3]:{{ site.baseurl }}{% link _posts/2022-05-23-retropy-getting-started.md %}
 [4]:{{ site.baseurl }}{% link _posts/2023-03-25-retropy-tutorial-movement-part-1.md %}
 [5]:{{ site.baseurl }}{% link _posts/2023-03-25-retropy-tutorial-movement-part-2.md %}
+[6]:{{ site.baseurl }}{% link _posts/0000-00-00-retropy-tutorial-flip.md %}
+[7]:{{ site.baseurl }}{% link _posts/0000-01-01-retropy-update-firmware.md %}
