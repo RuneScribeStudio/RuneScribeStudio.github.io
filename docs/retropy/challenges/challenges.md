@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Tutorials
+title: Challenges
 parent: retroPy
 has_children: true
 ---
 
-## Tutorials
+## Challenges
