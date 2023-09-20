@@ -4,18 +4,7 @@ title: APIs
 parent: retroPy
 ---
 
-## retroPy Color Palette
 
-retroPy uses a 16 color palette system.
-_(retroPy uses the same color palette system as Pico-8)._
-
-![img-description](/assets/images/color_pallet.png)
-
-Color values:
-
-> 0x0000, 0x194A, 0x792A, 0x042A, 0xAA86, 0x5AA9, 0xC618, 0xFF9D,
-
-> 0xF809, 0xFD00, 0xFF64, 0x0726, 0x2D7F, 0x83B3, 0xFBB5, 0xFE75
 
 ## API References
 
@@ -31,148 +20,141 @@ Color values:
 
 `resumeTimer()`
 
+`clear(color)`
+- clear the screen black
+{: .fs-3 }
+{: .lh-0 }
+- color: use specific color to clear screen with
+{: .fs-3 }
+{: .lh-0 }
+
+`draw()`
+- draw the actor in the draw
+{: .fs-3 }
+{: .lh-0 }
+
 `color_p(color)`
 
 `color_palette(val)`
 
 `color_reset()`
 
-### Orientation (setting)
-
-Set the orientation of the display.
-
-| setting values | 
-|-|
-| 0 – normal |
-| 1 – rotation 90 degrees |
-| 2 – rotation 180 degrees |
-| 3 – rotation 270 degrees |
-
-### Rect
-
-Setup
+### Rect Setup
 
 `Rect(x,  y,  width,  length)`
 - A built in class.
+{: .fs-3 }
+{: .lh-0 }
 
-### Graphics
-
-`clear(color)`
-- clear the screen black
-- color: use specific color to clear screen with
-
+### Graphics (Primitives)
 `pixel(x, y, color)`
 - set the pixel at x, y with color
+{: .fs-3 }
+{: .lh-0 }
 
 `line(x1, y1, x2, y2, color)`
 - draw a line starting at x1, y1 and ending at x2, y2
+{: .fs-3 }
+{: .lh-0 }
 
 `hline(x, y, length, color)`
 - draw a horizontal line at x, y with length and color
+{: .fs-3 }
+{: .lh-0 }
 
 `vline(x, y, height, color)`
 - draw a verticle line at x, y with length and color
+{: .fs-3 }
+{: .lh-0 }
 
 `circle(x, y, radius, color)`
-- draw a circle center x, y with radius and color 
+- draw a circle center x, y with radius and color
+{: .fs-3 }
+{: .lh-0 }
 
-`filled_circle(center, radius, color)`
-- draw a filled circle center x, y with radius and color 
+`filled_circle(x, y, radius, color)`
+- draw a filled circle center x, y with radius and color
+{: .fs-3 }
+{: .lh-0 }
 
 `rect(Rect, color)`
-- draw a rectangle at Rect with color 
+- draw a rectangle at Rect with color
+{: .fs-3 }
+{: .lh-0 }
 
 `filled_rect(Rect, color)`
-- draw a filled rectangle at Rect with color 
+- draw a filled rectangle at Rect with color
+{: .fs-3 }
+{: .lh-0 }
 
 `text(string, x, y, color)`
 - write a string at x, y with color
+{: .fs-3 }
+{: .lh-0 }
 
 
-## Actor
+### Game Object
 
-`actor(ptr2spriteTable, x, y, flipDuration, speed_x, speed_y, mode)`
-- create an actor with spriteTable at x, y with flipDuration and speed_x and speed_y
+`gameObj(ptr2spriteTable, x, y, flipDuration, speed_x, speed_y, mode)`
+- create an game object with spriteTable at x, y with flipDuration and speed_x and speed_y
+{: .fs-3 }
+{: .lh-0 }
 - speed is in pixel per second (float)
+{: .fs-3 }
+{: .lh-0 }
+
+#### Game Object Members
 
 `speed(speed_x, speed_y)`
-- actor speed x direction and y direction
+- gameObj speed x direction and y direction
+{: .fs-3 }
+{: .lh-0 }
 
 `speed_x(speed)`
-- set actor speed in the x direction
+- get gameObj speed in the x direction
+{: .fs-3 }
+{: .lh-0 }
 
 `speed_x`
-- get actor speed x direction
+- get gameObj speed x direction
+{: .fs-3 }
+{: .lh-0 }
 
 `speed_y(speed)`
-- set actor speed in the y direction
+- set gameObj speed in the y direction
+{: .fs-3 }
+{: .lh-0 }
  
-`speed_y` 
-- get actor speed y direction
+`speed_y`
+
+- get gameObj speed y direction
+{: .fs-3 }
+{: .lh-0 }
 
 `pos(pos_x, pos_y)`
-- set actor positions
+- set gameObj position
+{: .fs-3 }
+{: .lh-0 }
 
 `pos_x(position)`
-- set actor x position
+- set gameObj x position
+{: .fs-3 }
+{: .lh-0 }
 
-`pos_x` 
-- get actor x position
+`pos_x`
+- get gameObj x position
+{: .fs-3 }
+{: .lh-0 }
 
 `pos_y(position)`
-- set actor y position
+- set gameObj y position
+{: .fs-3 }
+{: .lh-0 }
 
-`pos_y` 
-- get actor y poaition
-
-`bound(xmin, xmax, ymin, ymax)`
-- set the maximum and minimum x and y positions
-
-`bound_x(xmin, xmax)`
-- set the maximum and minimum x  positions
-
-`bound_y(ymin, ymax)`
-- set the maximum and minimum y positions
-
-`dist(actor)`
-- get distance between 2 actors
-
-`sprite()`
-- change the spriteTable
-
-`currNdx(ndx)`
-- get the current sprite index
-
-`draw()`
-- draw the actor in the draw
-
-`moveTowards(x, y, speed, dt)`
-
-`collider(actor)`
-
-`colliderEx(actor)`
-
-`colliderPt(x, y)`
-
-`resizeCollider(x, y, w, h)`
-
-`drawCollider(color)`
-
-`collider_xy(actor, x, y)`
-
-`pos_cx`
-
-`pos_cy`
-
-`bot_cx`
-
-`bot_cy`
-
-`id(val)`
-
-`type(val)`
-
-`val(val)`
+`pos_y`
+- get gameObj y position
+{: .fs-3 }
+{: .lh-0 }
 
 `mid_x`
 
@@ -182,4 +164,88 @@ Setup
 
 `bot_y`
 
+`pos_cx`
 
+`pos_cy`
+
+`bot_cx`
+
+`bot_cy`
+
+### Colliders
+
+`drawCollider(color)`
+- draw a rectangle to represent the collider
+{: .fs-3 }
+{: .lh-0 }
+
+`collider(gameObj)`
+- check if gameObj collides with another
+{: .fs-3 }
+{: .lh-0 }
+
+`colliderEx(gameObj)`
+- similar to collider with extra info
+{: .fs-3 }
+{: .lh-0 }
+
+`colliderPt(x, y)`
+- check if a point is inside the gameObj collider
+{: .fs-3 }
+{: .lh-0 }
+
+`resizeCollider(x, y, w, h)`
+- resize the gameObj collider
+{: .fs-3 }
+{: .lh-0 }
+
+`collider_xy(gameObj, x, y)`
+- check if gameObj collides with another position x, y
+{: .fs-3 }
+{: .lh-0 }
+
+### Sprite
+
+`sprite()`
+- change the spriteTable
+{: .fs-3 }
+{: .lh-0 }
+
+`currNdx(ndx)`
+- get the current sprite index
+{: .fs-3 }
+{: .lh-0 }
+
+`flip(val)`
+
+`mode(val)`
+
+`flipDuration(msec)`
+
+### Calculations
+
+`dist(gameObj)`
+- get distance between 2 actors
+{: .fs-3 }
+{: .lh-0 }
+
+`moveTowards(x, y, speed, dt)`
+
+`id(val)`
+
+`type(val)`
+
+`val(val)`
+
+## retroPy Color Palette
+
+retroPy uses a 16 color palette system.
+_(retroPy uses the same color palette system as Pico-8)._
+
+![img-description](/assets/images/color_pallet.png)
+
+Color values:
+
+> 0x0000, 0x194A, 0x792A, 0x042A, 0xAA86, 0x5AA9, 0xC618, 0xFF9D,
+
+> 0xF809, 0xFD00, 0xFF64, 0x0726, 0x2D7F, 0x83B3, 0xFBB5, 0xFE75
