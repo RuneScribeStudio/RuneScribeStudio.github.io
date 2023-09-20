@@ -4,11 +4,9 @@ title: APIs
 parent: retroPy
 ---
 
+# API References
 
-
-## API References
-
-### rpy
+## rpy
 
 `quitRun()`
 - quit the retroPy game
@@ -43,25 +41,21 @@ parent: retroPy
 {: .fs-3 }
 {: .lh-0 }
 
-`draw()`
-- draw the actor in the draw
-{: .fs-3 }
-{: .lh-0 }
-
 `color_p(color)`
 
 `color_palette(val)`
 
 `color_reset()`
 
-### Rect Setup
+## Rect Setup
 
 `Rect(x,  y,  width,  length)`
 - A built in class.
 {: .fs-3 }
 {: .lh-0 }
 
-### Graphics (Primitives)
+## Graphics (Primitives)
+
 `pixel(x, y, color)`
 - set the pixel at x, y with color
 {: .fs-3 }
@@ -108,17 +102,15 @@ parent: retroPy
 {: .lh-0 }
 
 
-### Game Object
+## Game Object
 
 `gameObj(ptr2spriteTable, x, y, flipDuration, speed_x, speed_y, mode)`
-- create an game object with spriteTable at x, y with flipDuration and speed_x and speed_y
-{: .fs-3 }
-{: .lh-0 }
-- speed is in pixel per second (float)
-{: .fs-3 }
-{: .lh-0 }
+- create an game object with spriteTable at x, y with flipDuration and speed_x and speed_y 
+{: .fs-3 .lh-0}
+- speed is in pixel per second (float) 
+{: .fs-3 .lh-0}
 
-#### Game Object Members
+### Game Object Members
 
 `speed(speed_x, speed_y)`
 - gameObj speed x direction and y direction
@@ -141,7 +133,6 @@ parent: retroPy
 {: .lh-0 }
  
 `speed_y`
-
 - get gameObj speed y direction
 {: .fs-3 }
 {: .lh-0 }
@@ -202,13 +193,34 @@ parent: retroPy
 {: .lh-0 }
 
 `bot_cx`
+- get camera x bot right position
+{: .fs-3 }
+{: .lh-0 }
 
 `bot_cy`
+- get camera y bot right position
+{: .fs-3 }
+{: .lh-0 }
 
-### Colliders
+`draw()`
+- draw the actor in the draw
+{: .fs-3 }
+{: .lh-0 }
+
+`drawCam()`
+- draw the camera
+{: .fs-3 }
+{: .lh-0 }
+
+#### Colliders
 
 `drawCollider(color)`
 - draw a rectangle to represent the collider
+{: .fs-3 }
+{: .lh-0 }
+
+`drawCamCollider(color)`
+- draw a rectangle to represent the collider around the camera
 {: .fs-3 }
 {: .lh-0 }
 
@@ -237,7 +249,7 @@ parent: retroPy
 {: .fs-3 }
 {: .lh-0 }
 
-### Sprite
+#### Sprite
 
 `sprite()`
 - change the spriteTable
@@ -258,7 +270,7 @@ parent: retroPy
 
 `flipDuration(msec)`
 
-### Calculations
+#### Calculations
 
 `dist(gameObj)`
 - get distance between 2 actors
