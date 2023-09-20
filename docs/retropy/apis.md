@@ -11,14 +11,29 @@ parent: retroPy
 ### rpy
 
 `quitRun()`
+- quit the retroPy game
+{: .fs-3 }
+{: .lh-0 }
 
 `pauseRun()`
+- pause the retroPy game
+{: .fs-3 }
+{: .lh-0 }
 
 `resumeRun()`
+- resume the retroPy game
+{: .fs-3 }
+{: .lh-0 }
 
 `pauseTimer()`
+- pause dt
+{: .fs-3 }
+{: .lh-0 }
 
 `resumeTimer()`
+- resume dt
+{: .fs-3 }
+{: .lh-0 }
 
 `clear(color)`
 - clear the screen black
@@ -157,16 +172,34 @@ parent: retroPy
 {: .lh-0 }
 
 `mid_x`
+- get gameObj x mid position
+{: .fs-3 }
+{: .lh-0 }
 
 `mid_y`
+- get gameObj y mid position
+{: .fs-3 }
+{: .lh-0 }
 
 `bot_x`
+- get gameObj x bot right position
+{: .fs-3 }
+{: .lh-0 }
 
 `bot_y`
+- get gameObj y bot right position
+{: .fs-3 }
+{: .lh-0 }
 
 `pos_cx`
+- get camera x position
+{: .fs-3 }
+{: .lh-0 }
 
 `pos_cy`
+- get camera y position
+{: .fs-3 }
+{: .lh-0 }
 
 `bot_cx`
 
@@ -217,6 +250,9 @@ parent: retroPy
 {: .lh-0 }
 
 `flip(val)`
+- val (0: default, 1: 90 degrees, 2: 180 degrees, 3: 270 degrees)
+{: .fs-3 }
+{: .lh-0 }
 
 `mode(val)`
 
@@ -230,12 +266,16 @@ parent: retroPy
 {: .lh-0 }
 
 `moveTowards(x, y, speed, dt)`
+- make gameObj move towads a specific point
+{: .fs-3 }
+{: .lh-0 }
 
 `id(val)`
-
 `type(val)`
-
 `val(val)`
+- give id to gameObj
+{: .fs-3 }
+{: .lh-0 }
 
 ## retroPy Color Palette
 

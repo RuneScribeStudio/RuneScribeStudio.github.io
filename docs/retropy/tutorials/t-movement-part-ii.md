@@ -7,16 +7,15 @@ grand_parent: retroPy
 
 ## Introduction
 
-In this tutorial, we will be continuing our code from the [previous tutorial][1] by adding a jumping mechanic for our player.
+In this tutorial, we will be continuing our code from the [previous tutorial]({% link docs/retropy/tutorials/t-movement-part-i.md %}) by adding a jumping mechanic for our player.
 
-[1]
 
 ## Jumping
 
 We will utilize Button A for jumping. In order to jump, we need to give a relatively large value to `player.speed_y` e.g -190. The value is negative since we need the player to move upwards. We will also assign a global variable `player_jumpSpeed`
 
 {% capture code %}
-{% highlight ruby linenos %}
+{% highlight python linenos %}
 player_jumpSpeed = -190
 if rpy.btnADown():
     player.speed_y = player_jumpSpeed
@@ -30,7 +29,7 @@ Our player can now jump. However, if you continuously press the A Button, the pl
 To avoid this, we will have to keep track of the player's position and allow him to jump only if he is on the ground by using the code below:
 
 {% capture code %}
-{% highlight ruby linenos %}
+{% highlight python linenos %}
     if player.bot_y > groundLevel:
        player.bot_y = groundLevel-1
 {% endhighlight %}
@@ -43,7 +42,7 @@ Let's create another global variable `player_isGrounded = False` and set it to `
 Once everything is implemented, the code should look as follows:
 
 {% capture code %}
-{% highlight ruby linenos %}
+{% highlight python linenos %}
 player_walkSpeed = 50
 player_jumpSpeed = -190
 player_isGrounded = False
@@ -85,7 +84,7 @@ def update(dt):
 To achieve multiple jumps, we need to keep track of a few more states.
 
 {% capture code %}
-{% highlight ruby linenos %}
+{% highlight python linenos %}
 player_isJumping = False
 player_jumpCount = 0
 player_jumpMax = 2
@@ -98,7 +97,7 @@ We need to check if player is Jumping with `player_isJumping`
 We need to track how many multiple jump has been made and make sure that it doesn’t exceed the maximum `player_jumpMax`.
 
 {% capture code %}
-{% highlight ruby linenos %}
+{% highlight python linenos %}
     if player_isGrounded:
         player.acc_y = 0
         player.speed_y = 0
@@ -128,7 +127,7 @@ At this point you will be able to do a double jump to increase the number of mul
 Full code:
 
 {% capture code %}
-{% highlight ruby linenos %}
+{% highlight python linenos %}
 from retroPy import rpy, actor, LoadSprite
 
 p_player = LoadSprite("playerT.rs4")

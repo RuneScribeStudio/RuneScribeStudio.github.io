@@ -19,7 +19,7 @@ In this tutorial, we will cover on how to change the orientation of our sprites 
 
 Example 
 {% capture code %}
-{% highlight ruby linenos %}
+{% highlight python linenos %}
 from retroPy import rpy, actor, LoadSpriteStr
 from Assets import heart
 
@@ -55,7 +55,7 @@ In the next example we are using a sing sprite of boy moving in the right direct
 Using the flip allows us to change the direction of the sprite without the need for extra sprites, thus allowing us to save more memory.
 
 {% capture code %}
-{% highlight ruby linenos %}
+{% highlight python linenos %}
 from retroPy import rpy, Rect, actor, LoadSpriteStr
 import Assets.boy
 

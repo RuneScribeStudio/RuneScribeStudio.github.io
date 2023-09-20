@@ -30,7 +30,7 @@ Let's start by creating the character for our player by adding these 3 lines.
 Your code should resemble the code shown below:
 
 {% capture code %}
-{% highlight ruby linenos %}
+{% highlight python linenos %}
 from retroPy import rpy, actor, LoadSprite
 
 p_player = LoadSprite("playerT.rs4")
@@ -58,7 +58,7 @@ If everything is working as intended, you should see your player at the center o
 Now let's input movement into our player. We'll start by making him move left and right based on our controls.
 
 {% capture code %}
-{% highlight ruby linenos %}
+{% highlight python linenos %}
 def update(dt):
     if rpy.btnLeftDown():
         player.speed_x = -20        
@@ -76,7 +76,7 @@ Great, we can now move around. However, it looks slight off as our player does n
 
 Our new code for `update()` should look like this:
 {% capture code %}
-{% highlight ruby linenos %}
+{% highlight python linenos %}
 def update(dt):
     if rpy.btnLeftDown():
         player.currNdx(0, 1)
@@ -94,7 +94,7 @@ rpy.run(update, draw)
 
 We'll finish up the movement by adding code to make our player stop moving when the left or right button is released. This will allow us to control our player effectively.
 {% capture code %}
-{% highlight ruby linenos %}
+{% highlight python linenos %}
     if rpy.btnLeftUp():
         player.speed_x = 0
     if rpy.btnRightUp():
@@ -117,7 +117,7 @@ We'll start with creating the ground first as we do not want the player to fall 
 Next, let's implement code that allows our player to not fall below the line.
 
 {% capture code %}
-{% highlight ruby linenos %}
+{% highlight python linenos %}
 if player.bot_y > 238:
     player.bot_y = 237
 {% endhighlight %}
@@ -132,7 +132,7 @@ Finally, we'll create the gravity by adding acceleration to the player in the y-
 This is what the final code looks like:
 
 {% capture code %}
-{% highlight ruby linenos %}
+{% highlight python linenos %}
 def update(dt):
     if rpy.btnLeftDown():
         player.currNdx(0, 1)
@@ -181,7 +181,7 @@ We'll go back to our `update()` and `draw()`  methods to implement the global va
 
 The finalized code:
 {% capture code %}
-{% highlight ruby linenos %}
+{% highlight python linenos %}
 from retroPy import rpy, actor, LoadSprite
 
 p_player = LoadSprite("playerT.rs4")
@@ -229,5 +229,4 @@ rpy.run(update, draw)
 
 Congratulations! You have a controllable player that walks on a solid ground and abides by the laws of gravity.
 
-We'll cover more elements of movement such as jumping in our next turorial [Movement Part II][2].
-
+We'll cover more elements of movement such as jumping in our next turorial [Movement Part II]({% link docs/retropy/tutorials/t-movement-part-ii.md %}).
